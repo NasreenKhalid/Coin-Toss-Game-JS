@@ -1,0 +1,116 @@
+:root {
+  --color-font: rgb(255, 115, 0);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: var(--color-font);
+  margin: 30px auto;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 400px;
+  height: 600px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.selection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  text-align: center;
+  margin: 14px auto;
+  line-height: 24px;
+}
+
+.selects {
+  color: var(--color-font);
+  text-transform: uppercase;
+}
+
+.center {
+  height: 300px;
+  width: 200px;
+  background: url("./heads.png");
+  margin: auto;
+}
+
+.scores {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  text-align: center;
+  margin: 14px auto;
+  line-height: 24px;
+}
+
+#player,
+#computer {
+  background-color: var(--color-font);
+}
+
+h3 {
+  margin-top: 17px;
+  text-align: center;
+  font-size: 27px;
+  color: var(--color-font);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  margin: 20px;
+}
+
+.btn {
+  color: var(--color-font);
+  font-size: 18px;
+  border-radius: 4px;
+  padding: 7px;
+  outline: none;
+  border: none;
+  width: 80px;
+  text-align: center;
+  background: rgb(245, 167, 147);
+  margin: auto;
+}
+
+.animate {
+  background: url("./heads.png");
+  height: 300px;
+  width: 200px;
+  animation: spin 1s ease-in;
+  animation-iteration-count: 2;
+}
+
+@keyframes spin {
+  0% {
+    background: url("./heads.png");
+  }
+  25% {
+    background: url("./tails.png");
+  }
+  50% {
+    background: url("./heads.png");
+  }
+  75% {
+    background: url("./tails.png");
+  }
+}
